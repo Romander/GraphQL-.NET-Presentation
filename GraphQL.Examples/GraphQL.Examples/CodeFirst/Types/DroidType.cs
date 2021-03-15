@@ -1,30 +1,30 @@
-﻿using HotChocolate.Types;
-using PureCodeFirst.v10.Models;
-using PureCodeFirst.v10.Resolvers;
+﻿using CodeFirst.Models;
+using CodeFirst.Resolvers;
+using HotChocolate.Types;
 
-namespace PureCodeFirst.v10.Types
+namespace CodeFirst.Types
 {
-    public class DroidType
+  public class DroidType
         : ObjectType<Droid>
+  {
+    protected override void Configure(IObjectTypeDescriptor<Droid> descriptor)
     {
-        protected override void Configure(IObjectTypeDescriptor<Droid> descriptor)
-        {
-            descriptor.Interface<CharacterType>();
+      descriptor.Interface<CharacterType>();
 
-            descriptor.Field(t => t.Id)
-                .Type<NonNullType<IdType>>();
+      descriptor.Field(t => t.Id)
+          .Type<NonNullType<IdType>>();
 
-            descriptor.Field(t => t.AppearsIn)
-                .Type<ListType<EpisodeType>>();
+      descriptor.Field(t => t.AppearsIn)
+          .Type<ListType<EpisodeType>>();
 
-            descriptor.Field<SharedResolvers>(r => r.GetCharacter(default, default))
-                .UsePaging<CharacterType>()
-                .Name("friends");
+      descriptor.Field<SharedResolvers>(r => r.GetCharacter(default, default))
+          .UsePaging<CharacterType>()
+          .Name("friends");
 
-            descriptor.Field<SharedResolvers>(t => t.GetHeight(default, default))
-                .Type<FloatType>()
-                .Argument("unit", a => a.Type<EnumType<Unit>>())
-                .Name("height");
-        }
+      descriptor.Field<SharedResolvers>(t => t.GetHeight(default, default))
+          .Type<FloatType>()
+          .Argument("unit", a => a.Type<EnumType<Unit>>())
+          .Name("height");
     }
+  }
 }

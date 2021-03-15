@@ -1,24 +1,24 @@
-﻿using HotChocolate.Types;
-using PureCodeFirst.v10.Models;
+﻿using CodeFirst.Models;
+using HotChocolate.Types;
 
-namespace PureCodeFirst.v10.Types
+namespace CodeFirst.Types
 {
-    public class QueryType
+  public class QueryType
         : ObjectType<Query>
+  {
+    protected override void Configure(IObjectTypeDescriptor<Query> descriptor)
     {
-        protected override void Configure(IObjectTypeDescriptor<Query> descriptor)
-        {
-            descriptor.Field(t => t.GetHero(default))
-                .Type<CharacterType>()
-                .Argument("episode", a => a.DefaultValue(Episode.NewHope));
+      descriptor.Field(t => t.GetHero(default))
+          .Type<CharacterType>()
+          .Argument("episode", a => a.DefaultValue(Episode.NewHope));
 
-            descriptor.Field(t => t.GetCharacter(default, default))
-                .Type<NonNullType<ListType<NonNullType<CharacterType>>>>();
+      descriptor.Field(t => t.GetCharacter(default, default))
+          .Type<NonNullType<ListType<NonNullType<CharacterType>>>>();
 
-            // the search can only be executed if the current
-            // identity has a country
-            descriptor.Field(t => t.Search(default))
-                .Type<ListType<SearchResultType>>();
-        }
+      // the search can only be executed if the current
+      // identity has a country
+      descriptor.Field(t => t.Search(default))
+          .Type<ListType<SearchResultType>>();
     }
+  }
 }

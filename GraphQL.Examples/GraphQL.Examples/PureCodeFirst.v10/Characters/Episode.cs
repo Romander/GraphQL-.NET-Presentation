@@ -1,23 +1,23 @@
 namespace PureCodeFirst.v10.Characters
 {
+  /// <summary>
+  /// The Star Wars episodes.
+  /// </summary>
+  public enum Episode
+  {
     /// <summary>
-    /// The Star Wars episodes.
+    /// Star Wars Episode IV: A New Hope
     /// </summary>
-    public enum Episode
-    {
-        /// <summary>
-        /// Star Wars Episode IV: A New Hope
-        /// </summary>
-        NewHope,
+    NewHope,
 
-        /// <summary>
-        /// Star Wars Episode V: Empire Strikes Back
-        /// </summary>
-        Empire,
-        
-        /// <summary>
-        /// Star Wars Episode VI: Return of the Jedi
-        /// </summary>
-        Jedi
-    }
+    /// <summary>
+    /// Star Wars Episode V: Empire Strikes Back
+    /// </summary>
+    Empire,
+
+    /// <summary>
+    /// Star Wars Episode VI: Return of the Jedi
+    /// </summary>
+    Jedi
+  }
 }

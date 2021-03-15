@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureCodeFirst.v10", "PureCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureCodeFirst.v11", "PureCodeFirst.v11\PureCodeFirst.v11.csproj", "{D80044AE-5FC7-46DF-91A0-2BE4D332F918}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Tests", "GraphQL.Tests\GraphQL.Tests.csproj", "{D9318856-CF64-4DEA-A29E-F09AD5CE4472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D80044AE-5FC7-46DF-91A0-2BE4D332F918}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80044AE-5FC7-46DF-91A0-2BE4D332F918}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D80044AE-5FC7-46DF-91A0-2BE4D332F918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9318856-CF64-4DEA-A29E-F09AD5CE4472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9318856-CF64-4DEA-A29E-F09AD5CE4472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9318856-CF64-4DEA-A29E-F09AD5CE4472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9318856-CF64-4DEA-A29E-F09AD5CE4472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,11 @@
-namespace PureCodeFirst.v10.Models
+namespace CodeFirst.Models
 {
-    /// <summary>
-    /// Different units of measurement.
-    /// </summary>
-    public enum Unit
-    {
-        Foot,
-        Meters
-    }
+  /// <summary>
+  /// Different units of measurement.
+  /// </summary>
+  public enum Unit
+  {
+    Foot,
+    Meters
+  }
 }

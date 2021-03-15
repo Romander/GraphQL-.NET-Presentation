@@ -1,17 +1,17 @@
-﻿using HotChocolate.Types;
-using PureCodeFirst.v10.Models;
+﻿using CodeFirst.Models;
+using HotChocolate.Types;
 
-namespace PureCodeFirst.v10.Types
+namespace CodeFirst.Types
 {
-    public class SearchResultType
+  public class SearchResultType
         : UnionType
+  {
+    protected override void Configure(IUnionTypeDescriptor descriptor)
     {
-        protected override void Configure(IUnionTypeDescriptor descriptor)
-        {
-            descriptor.Name("SearchResult");
-            descriptor.Type<ObjectType<Starship>>();
-            descriptor.Type<HumanType>();
-            descriptor.Type<DroidType>();
-        }
+      descriptor.Name("SearchResult");
+      descriptor.Type<ObjectType<Starship>>();
+      descriptor.Type<HumanType>();
+      descriptor.Type<DroidType>();
     }
+  }
 }

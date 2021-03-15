@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using HotChocolate;
 using HotChocolate.Types;
 using PureCodeFirst.v11.Repositories;
+using System.Collections.Generic;
 
 namespace PureCodeFirst.v11.Characters
 {

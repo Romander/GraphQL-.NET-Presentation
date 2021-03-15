@@ -1,15 +1,15 @@
-﻿using HotChocolate;
+﻿using CodeFirst.Models;
+using HotChocolate;
 using HotChocolate.Types;
-using PureCodeFirst.v10.Models;
 
-namespace PureCodeFirst.v10
+namespace CodeFirst
 {
-    public class Subscription
-    {
-        [Subscribe]
-        public Review OnReview(
-            [Topic]Episode episode, 
-            [EventMessage]Review message) =>
-            message;
-    }
+  public class Subscription
+  {
+    [Subscribe]
+    public Review OnReview(
+        [Topic] Episode episode,
+        [EventMessage] Review message) =>
+        message;
+  }
 }

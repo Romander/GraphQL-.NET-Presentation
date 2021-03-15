@@ -1,6 +1,4 @@
 ﻿using HotChocolate;
-using HotChocolate.Language;
-using HotChocolate.Subscriptions;
 using HotChocolate.Types;
 using PureCodeFirst.v11.Characters;
 

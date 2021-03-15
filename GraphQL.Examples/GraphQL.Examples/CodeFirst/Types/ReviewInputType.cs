@@ -1,10 +1,10 @@
-﻿using HotChocolate.Types;
-using PureCodeFirst.v10.Models;
+﻿using CodeFirst.Models;
+using HotChocolate.Types;
 
-namespace PureCodeFirst.v10.Types
+namespace CodeFirst.Types
 {
-    public class ReviewInputType
+  public class ReviewInputType
         : InputObjectType<Review>
-    {
-    }
+  {
+  }
 }

@@ -6,15 +6,15 @@ using PureCodeFirst.v10.Repositories;
 
 namespace PureCodeFirst.v10.Reviews
 {
-    [ExtendObjectType(Name = "Subscription")]
-    public class ReviewSubscriptions
+  [ExtendObjectType(Name = "Subscription")]
+  public class ReviewSubscriptions
+  {
+    public Review OnReview(
+        Episode episode,
+        IEventMessage message,
+        [Service] IReviewRepository _repository)
     {
-        public Review OnReview(
-            Episode episode, 
-            IEventMessage message, 
-            [Service]IReviewRepository _repository)
-        {
-            return (Review)message.Payload;
-        }
+      return (Review)message.Payload;
     }
+  }
 }

@@ -1,8 +1,8 @@
-using System.Collections.Generic;
-using System.Linq;
 using HotChocolate;
 using HotChocolate.Types;
 using PureCodeFirst.v11.Repositories;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PureCodeFirst.v11.Characters
 {

@@ -1,9 +1,9 @@
+using HotChocolate;
+using HotChocolate.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using HotChocolate;
-using HotChocolate.AspNetCore;
 using PureCodeFirst.v11.Characters;
 using PureCodeFirst.v11.Repositories;
 using PureCodeFirst.v11.Reviews;
